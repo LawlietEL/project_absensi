@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../widget/custom_bottom_navigatio_bar.dart';
-import '../controllers/home_controller.dart';
+import '../controllers/absen_controller.dart';
 
-class HomeView extends GetView<HomeController> {
-  const HomeView({Key? key}) : super(key: key);
+class AbsenView extends GetView<AbsenController> {
+  const AbsenView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,7 +14,7 @@ class HomeView extends GetView<HomeController> {
       extendBody: true,
       body: const Center(
         child: Text(
-          'HomeView is working',
+          'AbsenView is working',
           style: TextStyle(fontSize: 20),
         ),
       ),
