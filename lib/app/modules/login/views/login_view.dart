@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
-
 import '../../../routes/app_pages.dart';
 import '../../../style/app_color.dart';
 import '../controllers/login_controller.dart';
@@ -16,15 +14,11 @@ class LoginView extends GetView<LoginController> {
         shrinkWrap: true,
         children: [
           Container(
-            height: MediaQuery.of(context).size.height * 35 / 100,
+            height: MediaQuery.of(context).size.height * 30 / 100,
             width: MediaQuery.of(context).size.width,
             padding: const EdgeInsets.only(left: 32),
             decoration: BoxDecoration(
               gradient: AppColor.primaryGradient,
-              // image: const DecorationImage(
-              //   image: AssetImage('assets/images/pattern-1-1.png'),
-              //   fit: BoxFit.cover,
-              // ),
             ),
             child: const Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -49,11 +43,11 @@ class LoginView extends GetView<LoginController> {
             ),
           ),
           Container(
-            height: MediaQuery.of(context).size.height * 65 / 100,
+            height: MediaQuery.of(context).size.height * 70 / 100,
             width: MediaQuery.of(context).size.width,
             color: Colors.white,
             padding:
-                const EdgeInsets.only(left: 20, right: 20, top: 36, bottom: 84),
+                const EdgeInsets.only(left: 20, right: 20, top: 36, bottom: 80),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,8 +65,8 @@ class LoginView extends GetView<LoginController> {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  padding: const EdgeInsets.only(left: 14, right: 14, top: 4),
-                  margin: const EdgeInsets.only(bottom: 16),
+                  padding: const EdgeInsets.only(left: 14, right: 14, top: 2),
+                  margin: const EdgeInsets.only(bottom: 14),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(8),
@@ -159,7 +153,7 @@ class LoginView extends GetView<LoginController> {
                         }
                       },
                       style: ElevatedButton.styleFrom(
-                        padding: const EdgeInsets.symmetric(vertical: 18),
+                        padding: const EdgeInsets.symmetric(vertical: 14),
                         backgroundColor: AppColor.primary,
                         elevation: 0,
                         shape: RoundedRectangleBorder(
@@ -184,8 +178,7 @@ class LoginView extends GetView<LoginController> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      // width: MediaQuery.of(context).size.width,
-                      margin: const EdgeInsets.only(top: 4),
+                      margin: const EdgeInsets.only(top: 2),
                       alignment: Alignment.centerLeft,
                       child: TextButton(
                         onPressed: () => Get.toNamed(Routes.CHANGE_PASSWORD),
@@ -196,15 +189,14 @@ class LoginView extends GetView<LoginController> {
                       ),
                     ),
                     Container(
-                      // width: MediaQuery.of(context).size.width,
-                      margin: const EdgeInsets.only(top: 4),
+                      margin: const EdgeInsets.only(top: 2),
                       alignment: Alignment.centerLeft,
                       child: TextButton(
                         onPressed: () => Get.toNamed(Routes.REGISTER),
                         style: TextButton.styleFrom(
                           foregroundColor: AppColor.secondarySoft,
                         ),
-                        child: const Text("Register"),
+                        child: const Text("Registrasi"),
                       ),
                     ),
                   ],
