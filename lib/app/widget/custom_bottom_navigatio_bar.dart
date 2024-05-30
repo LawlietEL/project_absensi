@@ -40,7 +40,7 @@ class CustomBottomNavigationBar extends GetView<PageIndexController> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                margin: const EdgeInsets.only(bottom: 4),
+                                margin: const EdgeInsets.only(bottom: 2),
                                 child: (controller.pageIndex.value == 0)
                                     ? const Icon(Icons.home)
                                     : const Icon(Icons.home_outlined),
@@ -78,7 +78,7 @@ class CustomBottomNavigationBar extends GetView<PageIndexController> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                margin: const EdgeInsets.only(bottom: 4),
+                                margin: const EdgeInsets.only(bottom: 2),
                                 child: (controller.pageIndex.value == 2)
                                     ? const Icon(Icons.person)
                                     : const Icon(Icons.person_outline),

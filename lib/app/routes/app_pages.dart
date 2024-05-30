@@ -12,6 +12,8 @@ import '../modules/profile/bindings/profile_binding.dart';
 import '../modules/profile/views/profile_view.dart';
 import '../modules/register/bindings/register_binding.dart';
 import '../modules/register/views/register_view.dart';
+import '../modules/riwayat/bindings/riwayat_binding.dart';
+import '../modules/riwayat/views/riwayat_view.dart';
 
 part 'app_routes.dart';
 
@@ -50,6 +52,11 @@ class AppPages {
       name: _Paths.PROFILE,
       page: () => const ProfileView(),
       binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.RIWAYAT,
+      page: () => const RiwayatView(),
+      binding: RiwayatBinding(),
     ),
   ];
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:project_absensi/app/routes/app_pages.dart';
 import 'package:project_absensi/app/widget/custom_bottom_navigatio_bar.dart';
 import '../controllers/home_controller.dart';
 
@@ -110,9 +111,9 @@ class HomeView extends GetView<HomeController> {
                   Column(
                     children: [
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () => Get.toNamed(Routes.RIWAYAT),
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.blue, // Blue color
+                          backgroundColor: Colors.blue, // Blue color
                           shape: const CircleBorder(),
                           padding: const EdgeInsets.all(24),
                         ),
@@ -129,7 +130,7 @@ class HomeView extends GetView<HomeController> {
                       ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.green, // Green color
+                          backgroundColor: Colors.green, // Green color
                           shape: const CircleBorder(),
                           padding: const EdgeInsets.all(24),
                         ),
