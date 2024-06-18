@@ -19,7 +19,7 @@ class CustomBottomNavigationBar extends GetView<PageIndexController> {
           Positioned(
             bottom: 0,
             child: Container(
-              height: 65,
+              height: 67,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 border: Border(
@@ -40,7 +40,7 @@ class CustomBottomNavigationBar extends GetView<PageIndexController> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                margin: const EdgeInsets.only(bottom: 2),
+                                margin: const EdgeInsets.only(bottom: 4),
                                 child: (controller.pageIndex.value == 0)
                                     ? const Icon(Icons.home)
                                     : const Icon(Icons.home_outlined),
@@ -78,7 +78,7 @@ class CustomBottomNavigationBar extends GetView<PageIndexController> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                margin: const EdgeInsets.only(bottom: 2),
+                                margin: const EdgeInsets.only(bottom: 4),
                                 child: (controller.pageIndex.value == 2)
                                     ? const Icon(Icons.person)
                                     : const Icon(Icons.person_outline),
@@ -105,21 +105,17 @@ class CustomBottomNavigationBar extends GetView<PageIndexController> {
             child: SizedBox(
               width: 64,
               height: 64,
-              child: FloatingActionButton(
-                onPressed: () => controller.changePage(1),
-                elevation: 0,
-                child: const Icon(Icons.fingerprint),
-                // child: (controller.presenceController.isLoading.isFalse)
-                //     ? SvgPicture.asset(
-                //         'assets/icons/fingerprint.svg',
-                //         color: Colors.white,
-                //       )
-                //     : const Center(
-                //         child: CircularProgressIndicator(
-                //           color: Colors.white,
-                //         ),
-                //       ),
-              ),
+              child: Obx(() => FloatingActionButton(
+                    onPressed: () => controller.changePage(1),
+                    elevation: 0,
+                    child: (controller.present.isLoading.isFalse)
+                        ? const Icon(Icons.fingerprint)
+                        : const Center(
+                            child: CircularProgressIndicator(
+                              color: Colors.white,
+                            ),
+                          ),
+                  )),
             ),
           ),
         ],

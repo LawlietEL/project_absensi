@@ -36,57 +36,53 @@ class ProfilPerusahaanModel {
 }
 
 class Data {
-  int? id;
   String? namaPerusahaan;
-  String? deskripsi;
   String? latitude;
   String? longitude;
+  String? deskripsi;
   String? jamMasuk;
   String? jamPulang;
-  dynamic image;
-  DateTime? createdAt;
   DateTime? updatedAt;
+  DateTime? createdAt;
+  int? id;
 
   Data({
-    this.id,
     this.namaPerusahaan,
-    this.deskripsi,
     this.latitude,
     this.longitude,
+    this.deskripsi,
     this.jamMasuk,
     this.jamPulang,
-    this.image,
-    this.createdAt,
     this.updatedAt,
+    this.createdAt,
+    this.id,
   });
 
   factory Data.fromJson(Map<String, dynamic> json) => Data(
-        id: json["id"],
         namaPerusahaan: json["nama_perusahaan"],
-        deskripsi: json["deskripsi"],
         latitude: json["latitude"],
         longitude: json["longitude"],
+        deskripsi: json["deskripsi"],
         jamMasuk: json["jam_masuk"],
         jamPulang: json["jam_pulang"],
-        image: json["image"],
-        createdAt: json["created_at"] == null
-            ? null
-            : DateTime.parse(json["created_at"]),
         updatedAt: json["updated_at"] == null
             ? null
             : DateTime.parse(json["updated_at"]),
+        createdAt: json["created_at"] == null
+            ? null
+            : DateTime.parse(json["created_at"]),
+        id: json["id"],
       );
 
   Map<String, dynamic> toJson() => {
-        "id": id,
         "nama_perusahaan": namaPerusahaan,
-        "deskripsi": deskripsi,
         "latitude": latitude,
         "longitude": longitude,
+        "deskripsi": deskripsi,
         "jam_masuk": jamMasuk,
         "jam_pulang": jamPulang,
-        "image": image,
-        "created_at": createdAt?.toIso8601String(),
         "updated_at": updatedAt?.toIso8601String(),
+        "created_at": createdAt?.toIso8601String(),
+        "id": id,
       };
 }
